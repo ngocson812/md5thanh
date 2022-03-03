@@ -1,0 +1,34 @@
+
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <form [formGroup]="formCreate" (ngSubmit)="create()">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Create Book</h5>
+        <button [routerLink]="['/book/book-list']" type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <label>Name:</label>
+        <div class="input-group mb-3">
+          <input class="form-control" placeholder="Enter a Name" formControlName="name">
+        </div>
+        <p *ngIf="formCreate?.get('name')?.valid" style="color: red">* không được nhập dưới 6 ký tự</p>
+        <label>Author:</label>
+        <div class="input-group mb-3">
+          <input class="form-control" placeholder="Enter a Author" formControlName="author">
+        </div>
+        <p *ngIf="formCreate?.get('author')?.valid" style="color: red">* không được nhập dưới 4 ký tự</p>
+        <label>Description:</label>
+        <div class="input-group mb-3">
+          <input class="form-control" placeholder="Enter a Description" formControlName="description">
+        </div>
+        <p *ngIf="!formCreate?.get('description')?.valid" style="color: red">* không được để trống</p>
+      </div>
+      <div class="modal-footer">
+        <button [routerLink]="['/book/book-list']" type="button" class="btn btn-secondary" data-dismiss="modal">Back to list</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
+      </div>
+    </form>
+  </div>
+</div>

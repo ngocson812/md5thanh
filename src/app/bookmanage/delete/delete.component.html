@@ -1,0 +1,9 @@
+
+<div>
+  <h1>Delete Book </h1>
+  <h3>Name : {{book.name}}</h3><br>
+  <h3>Author : {{book.author}}</h3><br>
+  <h3>Description : {{book.description}}</h3><br>
+  <button class="btn btn-danger m-1" (click)="delete()">Xoá</button>
+  <button [routerLink]="['/book/book-list']" class="btn btn-info">Back </button>
+</div>
