@@ -9,11 +9,11 @@ import {DetailComponent} from "./detail/detail.component";
 
 
 const routes: Routes = [
-  { path: 'tour-list', component: ShowComponent },
-  { path: 'tour-create', component: CreateComponent },
-  { path: 'tour-update/:id', component: EditComponent },
-  { path: 'tour-delete/:id', component: DeleteComponent },
-  { path: 'tour-detail/:id', component: DetailComponent }
+  { path: 'book-list', component: ShowComponent },
+  { path: 'book-create', component: CreateComponent },
+  { path: 'book-update/:id', component: EditComponent },
+  { path: 'book-delete/:id', component: DeleteComponent },
+  { path: 'book-detail/:id', component: DetailComponent }
 ];
 
 @NgModule({
