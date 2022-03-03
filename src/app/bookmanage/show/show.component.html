@@ -1,4 +1,15 @@
- <div class="e-table">
+
+<div class="col-12 col-lg-3 mb-3">
+  <div class="card">
+    <div class="card-body">
+      <a [routerLink]="['/book/book-create']" class="btn btn-success btn-block">
+        New Book
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="e-table">
           <div class="table-responsive table-lg mt-3">
             <table class="table table-bordered">
               <thead>
@@ -13,7 +24,7 @@
               <tbody id="tbody">
               <tr *ngFor="let t of bookList">
                 <td>{{t.id}}</td>
-                <td><a [routerLink]="['/book/book-detail', t.id]">{{t.name}}</a></td>
+                <td> <a [routerLink]="['/book/book-detail', t.id]"> {{t.name}} </a></td>
                 <td>{{t.author}}</td>
                 <td>{{t.description}}</td>
                 <td><a [routerLink]="['/book/book-update', t.id]"
@@ -28,12 +39,3 @@
           </div>
         </div>
 
-  <div class="col-12 col-lg-3 mb-3">
-    <div class="card">
-      <div class="card-body">
-        <a [routerLink]="['/book/book-create']" class="btn btn-success btn-block">
-          New Book
-        </a>
-      </div>
-    </div>
-  </div>
