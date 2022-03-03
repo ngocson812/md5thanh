@@ -24,7 +24,7 @@
               <tbody id="tbody">
               <tr *ngFor="let t of bookList">
                 <td>{{t.id}}</td>
-                <td> <a [routerLink]="['/book/book-detail', t.id]"> {{t.name}} </a></td>
+                <td> <a [routerLink]="['/book/book-detail', t.id]"> {{t.title}} </a></td>
                 <td>{{t.author}}</td>
                 <td>{{t.description}}</td>
                 <td><a [routerLink]="['/book/book-update', t.id]"
